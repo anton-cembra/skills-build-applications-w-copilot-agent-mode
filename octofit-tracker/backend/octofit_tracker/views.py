@@ -6,7 +6,8 @@ from .models import User, Team, Activity, Leaderboard, Workout
 
 @api_view(['GET', 'POST'])
 def api_root(request, format=None):
-	base_url = 'http://localhost:8000/'
+	# Use codespace URL for API endpoints
+	base_url = 'https://super-duper-bassoon-7vxw9r566r672ppg9-8000.app.github.dev/'
 	return Response({
 		'users': base_url + 'api/users/?format=api',
 		'teams': base_url + 'api/teams/?format=api',
